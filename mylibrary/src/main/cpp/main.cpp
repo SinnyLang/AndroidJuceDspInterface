@@ -15,3 +15,11 @@
 //         System.loadLibrary("main")
 //      }
 //    }
+
+#include <JuceHeader.h>
+int main(){
+    if (ProjectInfo::projectName == "AndroidJuceDspInterface"){}
+    auto* pFft = new juce::dsp::FFT(1);
+    pFft->getSize();
+    return 0;
+}

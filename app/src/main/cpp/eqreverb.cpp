@@ -19,29 +19,6 @@
 //    }
 extern "C"
 JNIEXPORT void JNICALL
-Java_xyz_sl_misic1_MainActivity_init(JNIEnv *env, jobject thiz, jint sample_rate) {
-    // TODO: implement init()
-}
-extern "C"
-JNIEXPORT void JNICALL
-Java_xyz_sl_misic1_MainActivity_process(JNIEnv *env, jobject thiz, jfloatArray audio_buffer,
-                                        jint num_frames, jint num_channels) {
-    // TODO: implement process()
-}
-extern "C"
-JNIEXPORT void JNICALL
-Java_xyz_sl_misic1_MainActivity_setBandGain(JNIEnv *env, jobject thiz, jint band_index,
-                                            jfloat gain) {
-    // TODO: implement setBandGain()
-}
-extern "C"
-JNIEXPORT void JNICALL
-Java_xyz_sl_misic1_MainActivity_setReverbLevel(JNIEnv *env, jobject thiz, jfloat level) {
-    // TODO: implement setReverbLevel()
-}
-
-extern "C"
-JNIEXPORT void JNICALL
 Java_xyz_sl_misic1_MyNativeProcessor_processPCM(
     JNIEnv *env,
     jclass clazz,

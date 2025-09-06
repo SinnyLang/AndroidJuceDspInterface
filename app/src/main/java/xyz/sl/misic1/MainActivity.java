@@ -38,10 +38,6 @@ import xyz.sl.misic1.databinding.ActivityMainBinding;
     static {
         System.loadLibrary("misic1");
     }
-    public native void init(int sampleRate);
-    public native void process(float[] audioBuffer, int numFrames, int numChannels);
-    public native void setBandGain(int bandIndex, float gain);
-    public native void setReverbLevel(float level);
 
     private ActivityMainBinding binding;
     private MyNativeProcessor my = new MyNativeProcessor();
