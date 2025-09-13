@@ -1,6 +1,7 @@
 package xyz.sl.misic1;
 
 import android.content.Context;
+import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -29,6 +30,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 import xyz.sl.dsp.juce.JuceNativeInterface;
@@ -92,7 +94,8 @@ import xyz.sl.misic1.databinding.ActivityMainBinding;
 
 
 //        Uri audioUri = Uri.parse("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
-        Uri audioUri = Uri.fromFile(new File(getExternalFilesDir(null), "SoundHelix-Song-1.mp3"));
+//        Uri audioUri = Uri.fromFile(new File(getExternalFilesDir(null), "SoundHelix-Song-1.mp3"));
+        Uri audioUri = Uri.parse("asset:///SoundHelix-Song-1.mp3");
         Log.i(this.getClass().getName(), String.valueOf(audioUri));
         MediaItem mediaItem = MediaItem.fromUri(audioUri);
         player.setMediaItem(mediaItem);
