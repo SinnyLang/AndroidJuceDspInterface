@@ -10,10 +10,12 @@ Subproject `:app` is an example of how to use in Exoplayer. Run `gradlew :app:bu
 
 ## How to use
 
-### Clone project
+### Clone project as subproject
 1. Clone this project to `<your_path>`.
 ```shell
 git clone https://github.com/SinnyLang/AndroidJuceDspInterface.git
+cd AndroidJuceDspInterface
+git submodule update --init --recursive
 ```
 
 2. Export this library. In your project `settings.gradle` add
@@ -32,6 +34,7 @@ in your `build.gradle`.
 ```shell
 git clone https://github.com/SinnyLang/AndroidJuceDspInterface.git
 cd AndroidJuceDspInterface
+git submodule update --init --recursive
 gradlew :mylibrary:build
 ```
 3. The `.aar` files will be generated in `dsp-lib/build/outputs/aar/<xxx>.aar` and copy an AAR file to your project.
