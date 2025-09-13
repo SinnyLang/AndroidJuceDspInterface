@@ -25,4 +25,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidJuceDspInterface"
 include ':app'
-include ':mylibrary'
+include ':dsp-lib'

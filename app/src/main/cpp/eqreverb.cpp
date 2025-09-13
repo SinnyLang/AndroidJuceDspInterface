@@ -22,12 +22,12 @@ JNIEXPORT void JNICALL
 Java_xyz_sl_misic1_MyNativeProcessor_processPCM(
     JNIEnv *env,
     jclass clazz,
-    jshortArray data,
+    jfloatArray data,
     jint length,
     jint sample_rate) {
     // TODO: implement processPCM()
     // 获取 short[] 数据指针
-    jshort* pcmData = env->GetShortArrayElements(data, nullptr);
+    jfloat* pcmData = env->GetFloatArrayElements(data, nullptr);
 
     for (int i = 0; i < length; i++) {
         // 示例：音量减半
@@ -38,5 +38,5 @@ Java_xyz_sl_misic1_MyNativeProcessor_processPCM(
     }
 
     // 写回 Java 数组
-    env->ReleaseShortArrayElements(data, pcmData, 0);
+    env->ReleaseFloatArrayElements(data, pcmData, 0);
 }

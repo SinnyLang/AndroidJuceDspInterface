@@ -17,6 +17,8 @@
 //    }
 
 #include <JuceHeader.h>
+#include <jni.h>
+
 int main(){
     if (ProjectInfo::projectName == "AndroidJuceDspInterface"){}
     auto* pFft = new juce::dsp::FFT(1);

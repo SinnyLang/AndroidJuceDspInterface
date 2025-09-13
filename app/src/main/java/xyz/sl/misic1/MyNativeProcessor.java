@@ -2,19 +2,19 @@ package xyz.sl.misic1;
 
 
 import androidx.media3.common.C;
-import androidx.media3.common.audio.AudioProcessor;
 import androidx.media3.common.audio.BaseAudioProcessor;
 import androidx.media3.common.util.Log;
 import androidx.media3.common.util.UnstableApi;
 
 import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 import java.util.Arrays;
-import java.util.Random;
+
+import xyz.sl.dsp.juce.JuceNativeInterface;
 
 @UnstableApi
 public class MyNativeProcessor extends BaseAudioProcessor {
-    public static native void processPCM(short[] data, int length, int sampleRate);
+
+    JuceNativeInterface juceDsp = new JuceNativeInterface();
 
     @Override
     public void queueInput(ByteBuffer inputBuffer) {
@@ -28,7 +28,7 @@ public class MyNativeProcessor extends BaseAudioProcessor {
             pcm[i] = inputBuffer.getShort();
         }
 
-        processPCM(pcm, pcm.length, inputAudioFormat.sampleRate);
+        juceDsp.processPCM(pcm, pcm.length);
         Log.i("MyAudio", "queueInput pcm(processed)=" + Arrays.toString(pcm));
 
         // 写回到 outputBuffer
@@ -52,6 +52,7 @@ public class MyNativeProcessor extends BaseAudioProcessor {
             throw new UnhandledAudioFormatException(inputAudioFormat);
         }
 
+        juceDsp.prepare(inputAudioFormat.sampleRate, inputAudioFormat.bytesPerFrame);
         return new AudioFormat(
                 inputAudioFormat.sampleRate,
                 inputAudioFormat.channelCount,

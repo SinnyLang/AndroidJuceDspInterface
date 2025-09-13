@@ -31,6 +31,7 @@ import androidx.navigation.ui.NavigationUI;
 import java.io.File;
 import java.util.List;
 
+import xyz.sl.dsp.juce.JuceNativeInterface;
 import xyz.sl.misic1.databinding.ActivityMainBinding;
 
 @UnstableApi public class MainActivity extends AppCompatActivity {
@@ -42,6 +43,7 @@ import xyz.sl.misic1.databinding.ActivityMainBinding;
     private ActivityMainBinding binding;
     private MyNativeProcessor my = new MyNativeProcessor();
     private SonicAudioProcessor sonicA = new SonicAudioProcessor();
+    private JuceNativeInterface j = new JuceNativeInterface();
 
     @OptIn(markerClass = UnstableApi.class)
     @Override

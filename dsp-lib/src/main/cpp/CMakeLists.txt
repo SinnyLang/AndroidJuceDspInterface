@@ -108,6 +108,9 @@ file(GLOB_RECURSE PROJECT_SOURCES_2
 add_library( ${BINARY_NAME}
         SHARED
         "main.cpp"
+        "JuceNativeJniBridge.h"
+        "JuceNativeJniBridge.cpp"
+        "TenBrandEQ.cpp"
         ${PROJECT_SOURCES_1}
         ${PROJECT_SOURCES_2}
 )

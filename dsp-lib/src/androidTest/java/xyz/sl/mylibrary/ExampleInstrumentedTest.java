@@ -10,6 +10,8 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
+import xyz.sl.dsp.juce.JuceNativeInterface;
+
 /**
  * Instrumented test, which will execute on an Android device.
  *
@@ -22,5 +24,12 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("xyz.sl.mylibrary.test", appContext.getPackageName());
+    }
+
+    @Test
+    public void loadLibrary(){
+        JuceNativeInterface juceNativeInterface = new JuceNativeInterface();
+        String version = juceNativeInterface.getVersion();
+        assertNotNull("加载JuceNativeInterface动态库测试失败", version);
     }
 }
