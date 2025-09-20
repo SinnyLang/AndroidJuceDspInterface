@@ -5,7 +5,8 @@ Subproject `:app` is an example of how to use in Exoplayer. Run `gradlew :app:bu
 
 ## TODO List
  - Enable PCM processer interface of equalizer
- - To add 10 frequencies control interface
+ - Enable 10 frequencies control interface
+ - To encapsulate an equalizer class for easier audio adjustment
  - To add other Audio Effect
 
 ## How to use

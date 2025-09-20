@@ -28,7 +28,7 @@ public class ExampleInstrumentedTest {
 
     @Test
     public void loadLibrary(){
-        JuceNativeInterface juceNativeInterface = new JuceNativeInterface();
+        JuceNativeInterface juceNativeInterface = JuceNativeInterface.getJuceNativeInterface();
         String version = juceNativeInterface.getVersion();
         assertNotNull("加载JuceNativeInterface动态库测试失败", version);
     }

@@ -29,6 +29,6 @@ public class ExampleInstrumentedTest {
 
     @Test
     public void loadLibrary() {
-        JuceNativeInterface juceNativeInterface = new JuceNativeInterface();
+        JuceNativeInterface juceNativeInterface = JuceNativeInterface.getJuceNativeInterface();
     }
 }

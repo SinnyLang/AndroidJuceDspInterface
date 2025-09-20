@@ -2,6 +2,8 @@
 // Created by SinnyLang on 2025/9/7.
 //
 
+#include "FunctionResult.h"
+
 #ifndef ANDROIDJUCEDSPINTERFACE_JUCENATIVEJNIBRIDGE_H
 #define ANDROIDJUCEDSPINTERFACE_JUCENATIVEJNIBRIDGE_H
 
