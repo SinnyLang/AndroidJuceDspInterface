@@ -14,7 +14,7 @@ import xyz.sl.dsp.juce.JuceNativeInterface;
 @UnstableApi
 public class MyNativeProcessor extends BaseAudioProcessor {
 
-    JuceNativeInterface juceDsp = new JuceNativeInterface();
+    JuceNativeInterface juceDsp = JuceNativeInterface.getJuceNativeInterface();
 
     @Override
     public void queueInput(ByteBuffer inputBuffer) {
@@ -28,7 +28,7 @@ public class MyNativeProcessor extends BaseAudioProcessor {
             pcm[i] = inputBuffer.getShort();
         }
 
-        juceDsp.processPCM(pcm, pcm.length);
+        juceDsp.processPCM(pcm, pcm.length, inputAudioFormat.channelCount);
         Log.i("MyAudio", "queueInput pcm(processed)=" + Arrays.toString(pcm));
 
         // 写回到 outputBuffer
@@ -46,13 +46,22 @@ public class MyNativeProcessor extends BaseAudioProcessor {
         return output;
     }
 
+    void setEQGain(float frequency, int frequencyIndex, float gain){
+        juceDsp.setEqualizerBrandGain(frequency, frequencyIndex, gain, inputAudioFormat.sampleRate);
+    }
+
     @Override
     protected AudioFormat onConfigure(AudioFormat inputAudioFormat) throws UnhandledAudioFormatException {
         if (inputAudioFormat.encoding != C.ENCODING_PCM_16BIT) {
             throw new UnhandledAudioFormatException(inputAudioFormat);
         }
 
-        juceDsp.prepare(inputAudioFormat.sampleRate, inputAudioFormat.bytesPerFrame);
+        juceDsp.prepare(
+                inputAudioFormat.sampleRate,
+                inputAudioFormat.bytesPerFrame,
+                inputAudioFormat.channelCount
+        );
+
         return new AudioFormat(
                 inputAudioFormat.sampleRate,
                 inputAudioFormat.channelCount,

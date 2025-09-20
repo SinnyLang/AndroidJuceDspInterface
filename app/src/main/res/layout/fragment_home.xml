@@ -6,9 +6,244 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="411dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="204dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- 按钮行 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="speed-" />
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:text="speed+" />
+                </LinearLayout>
+
+                <!-- SeekBar列表 - 添加TextView显示当前值 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSeekBar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="控制项 1: 0"
+                        android:textSize="14sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSeekBar3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="控制项 2: 0"
+                        android:textSize="14sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSeekBar4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="控制项 3: 0"
+                        android:textSize="14sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSeekBar5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="控制项 4: 0"
+                        android:textSize="14sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSeekBar6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="控制项 5: 0"
+                        android:textSize="14sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSeekBar7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="控制项 6: 0"
+                        android:textSize="14sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSeekBar8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="控制项 7: 0"
+                        android:textSize="14sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSeekBar9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="控制项 8: 0"
+                        android:textSize="14sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSeekBar10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="控制项 9: 0"
+                        android:textSize="14sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSeekBar11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="控制项 10: 0"
+                        android:textSize="14sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
 
         <androidx.media3.ui.PlayerView
             android:id="@+id/player_view"
@@ -17,33 +252,7 @@
 
         </androidx.media3.ui.PlayerView>
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="205dp"
-            android:layout_height="128dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="103dp"
-            android:layout_marginBottom="203dp"
-            android:rotation="0"
-            android:rotationY="0"
-            android:text="speed+" />
-
     </RelativeLayout>
 
-
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
